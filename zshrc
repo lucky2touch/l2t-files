@@ -36,6 +36,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+M2_HOME=~/apache-maven-3.2.3
+NEXUS_HOME=~/nexus/nexus-2.7.2-03
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$M2_HOME/bin:$NEXUS_HOME/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
