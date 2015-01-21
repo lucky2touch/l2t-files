@@ -44,4 +44,4 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$
 PATH=$PATH:$HOME/.rvm/bin
 
 # Deal with maven encoding
-export MAVEN_OPTS="-Xms1024m -Xmx1024m -Dfile.encoding=UTF-8"
+export MAVEN_OPTS="-Xmx1024m -Dfile.encoding=UTF-8"
