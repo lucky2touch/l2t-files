@@ -35,9 +35,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
 M2_HOME=~/apache-maven-3.2.3
 NEXUS_HOME=~/nexus/nexus-2.7.2-03
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$M2_HOME/bin:$NEXUS_HOME/bin
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
+# Deal with maven encoding
+export MAVEN_OPTS="-Xms1024m -Xmx1024m -Dfile.encoding=UTF-8"
