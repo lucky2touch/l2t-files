@@ -1,0 +1,25 @@
+*filter
+
+-A INPUT -i lo -j ACCEPT
+
+-A INPUT -d 127.0.0.0/8 -j REJECT
+
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+-A OUTPUT -j ACCEPT
+
+-A INPUT -p tcp --dport 80 -j ACCEPT
+
+-A INPUT -p tcp --dport 443 -j ACCEPT
+
+-A INPUT -p tcp --dport 9982 -j ACCEPT
+
+-A INPUT -p tcp --dport 8838 -j ACCEPT
+
+-A INPUT -p udp --dport 8838 -j ACCEPT
+
+-A INPUT -j DROP
+
+-A FORWARD -j DROP
+
+COMMIT
