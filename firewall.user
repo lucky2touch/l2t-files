@@ -1,0 +1,7 @@
+# This file is interpreted as shell script.
+# Put your custom iptables rules here, they will
+# be executed with each firewall (re-)start.
+echo "Firewall start @$(date +"%T@%Y-%m-%d")" >>/tmp/vpn.log
+echo "Create IPSET @$(date +"%T@%Y-%m-%d")" >>/tmp/vpn.log
+ipset create vpn iphash -exist
+iptables -t nat -A PREROUTING -p tcp -m set --match-set vpn dst -j REDIRECT --to-port 1080
